@@ -1,0 +1,13 @@
+name: Comment on Pull Requests included in Release
+on:
+  release:
+    types: [published]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on Pull Requests
+        uses: nflaig/release-comment-on-pr@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
