@@ -5,9 +5,9 @@ on:
 
 jobs:
   comment:
+    name: Comment on PRs included in release
     runs-on: ubuntu-latest
     steps:
-      - name: Comment on Pull Requests
-        uses: nflaig/release-comment-on-pr@v1
+      - uses: nflaig/release-comment-on-pr@v1
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
